@@ -25,6 +25,11 @@
 		</script>
 	</head>
 	<body class="is-preload">
+		<div class="campaign-banner" role="region" aria-label="Campaign notice">
+  			<span>
+    		I’m running for Congress — campaign site <a href="https://chrisdiep.com">chrisdiep.com</a> launching soon.
+  			</span>
+		</div>
 
 		<!-- Nav -->
 			<nav id="nav">
@@ -148,6 +153,21 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+  				(function () {
+    				const b = document.querySelector('.campaign-banner');
+    				if (!b) return;
+					const nav = document.getElementById('nav');
+					const setPad = () => {
+						const bannerH = b.offsetHeight || 0;
+						const navH = nav ? nav.offsetHeight : 0;
+						document.body.style.paddingTop = (bannerH + navH) + 'px';
+						if (nav) nav.style.top = bannerH + 'px';
+					};
+					window.addEventListener('resize', setPad);
+					setPad();
+  				})();
+			</script>
 
 	</body>
 </html>
