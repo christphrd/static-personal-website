@@ -2033,7 +2033,7 @@ input, select, textarea {
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: #91d8ff; /* sky blue */
+	background: white;
 	color: #30594E; /* darker Statue-of-Liberty green for better contrast */
 	text-align: center;
 	padding: 0.45em 0.75em;
@@ -2043,6 +2043,22 @@ input, select, textarea {
 }
 .campaign-banner a { color: #30594E; text-decoration: underline; }
 
+.campaign-banner img {
+	height: 4em;
+	width: auto;
+}
+
+.campaign-banner span {
+	font-size: 1em;
+	color: #30594E;
+	display: block;
+	text-align: center;
+	margin-top: 0.25em;
+}
+
+.underline {
+	text-decoration: underline;
+}
 
 /* Nav */
 
